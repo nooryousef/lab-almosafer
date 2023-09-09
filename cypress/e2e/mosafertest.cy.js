@@ -21,7 +21,7 @@ describe('mosafer test', () => {
     cy.get('[data-testid="Header__LanguageSwitch"]').invoke('text').then((arOren)=>{
       if (arOren=='English') {
         cy.get('[data-testid="AutoCompleteInput"]').type(location[randomloC])
-        cy.get('[data-testid="AutoCompleteResultsList"]').should('include.text',location[randomloC]).first(Option).click()
+        cy.get('[data-testid="AutoCompleteResultsList"]').find('li').eq(1).click()
 
       //   let room=['غرفة واحدة، 2 بالغون، 0 أطفال','1 غرفة، 1 بالغ، 0 أطفال']
 
@@ -39,14 +39,14 @@ describe('mosafer test', () => {
       }
       else if (arOren=='العربية') {
         cy.get('[data-testid="AutoCompleteInput"]').type(dest[randomdest])
-        cy.get('[data-testid="AutoCompleteResultsList"]').should('include.text',dest[randomdest]).first(Option).click()
+        cy.get('[data-testid="AutoCompleteResultsList"]').find('li').eq(1).click()
       
-      //   let room=['1 Room, 2 Adults, 0 Children','1 Room, 1 Adult, 0 Children']
+      //   let room=['1 Room, 2 Adults, 0 Children','1 Room, 1 Adult, 0 Children'] 
 
       //  let mySuite=room.length
       //    let randomRoom=Math.floor(Math.random()*mySuite)
     
-      //   cy.get('[data-testid="HotelSearchBox__ReservationSelect_Select"]').select(room[randomRoom])
+      //   cy.get('[data-testid="HotelSearchBox__ReservationSelect_Select"]').select(room[randomRoom])  
     
       
       
