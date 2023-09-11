@@ -9,7 +9,7 @@ describe('mosafer test', () => {
     cy.visit(lang[randomIndex])
 
     cy.get('.cta__saudi').click();
-    cy.get('#uncontrolled-tab-example-tab-hotels > .sc-dWcDbm').click()
+    cy.get('#uncontrolled-tab-example-tab-hotels').click()
     let dest=['Dubai', 'Jeddah', 'Riyadh']
     const desT=dest.length
     const randomdest = Math.floor(Math.random() *desT)
@@ -41,7 +41,7 @@ describe('mosafer test', () => {
         cy.get('[data-testid="AutoCompleteInput"]').type(dest[randomdest])
         cy.get('[data-testid="AutoCompleteResultsList"]').find('li').eq(1).click()
       
-      //   let room=['1 Room, 2 Adults, 0 Children','1 Room, 1 Adult, 0 Children'] 
+      //   let room=['1 Room, 2 Adults, 0 Children','1 Room, 1 Adult, 0 Children']    
 
       //  let mySuite=room.length
       //    let randomRoom=Math.floor(Math.random()*mySuite)
